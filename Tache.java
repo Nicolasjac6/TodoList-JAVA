@@ -1,4 +1,4 @@
-public class sTache {
+public class Tache {
         private int id;
         private String nom;
         private String description;
