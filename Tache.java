@@ -1,3 +1,8 @@
+package utilisateur_authentification;
+
+import utilisateur_authentification.Liste;
+import utilisateur_authentification.Type;
+
 public class Tache {
         private int id;
         private String nom;

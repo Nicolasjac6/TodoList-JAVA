@@ -1,3 +1,5 @@
+package utilisateur_authentification;
+
 public class Type {
     private int id;
     private String label;

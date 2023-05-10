@@ -1,4 +1,4 @@
-package utilisateur;
+package utilisateur_authentification.ToDoList.src.utilisateur;
 
 public class Utilisateur {
     private int idU;

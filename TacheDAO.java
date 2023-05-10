@@ -1,3 +1,7 @@
+package utilisateur_authentification;
+
+import utilisateur_authentification.ToDoList.src.tache.Tache;
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -16,9 +20,9 @@ public class TacheDAO {
     public boolean create(Tache tache) throws SQLException {
         String query = "INSERT INTO tache (nom, description, est_realise, id_liste, id_type) VALUES (?, ?, ?, ?, ?)";
         PreparedStatement ps = connection.prepareStatement(query);
-        ps.setString(1, tache.getNom());
-        ps.setString(2, tache.getDescription());
-        ps.setBoolean(3, tache.isEstRealise());
+        ps.setString(1, tache.getTaskName());
+        ps.setString(2, tache.getTaskDesc());
+        ps.setBoolean(3, tache.isEst_realise());
         ps.setInt(4, tache.getListe().getIdListe());
         ps.setInt(5, tache.getType().getidType());
         int result = ps.executeUpdate();
@@ -28,12 +32,12 @@ public class TacheDAO {
     public boolean update(Tache tache) throws SQLException {
         String query = "UPDATE tache SET nom = ?, description = ?, est_realise = ?, id_liste = ?, id_type = ? WHERE id_tache = ?";
         PreparedStatement ps = connection.prepareStatement(query);
-        ps.setString(1, tache.getNom());
-        ps.setString(2, tache.getDescription());
-        ps.setBoolean(3, tache.isEstRealise());
+        ps.setString(1, tache.getTaskName());
+        ps.setString(2, tache.getTaskDesc());
+        ps.setBoolean(3, tache.isEst_realise());
         ps.setInt(4, tache.getListe().getIdListe());
         ps.setInt(5, tache.getType().getidType());
-        ps.setInt(6, tache.getIdTache());
+        ps.setInt(6, tache.getIdTask());
         int result = ps.executeUpdate();
         return result > 0;
     }
@@ -41,7 +45,7 @@ public class TacheDAO {
     public boolean delete(Tache tache) throws SQLException {
         String query = "DELETE FROM tache WHERE id_tache = ?";
         PreparedStatement ps = connection.prepareStatement(query);
-        ps.setInt(1, tache.getIdTache());
+        ps.setInt(1, tache.getIdTask());
         int result = ps.executeUpdate();
         return result > 0;
     }

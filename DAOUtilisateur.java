@@ -73,4 +73,8 @@ public class DAOUtilisateur {
             throw new DAOException("Erreur lors de l'authentification de l'utilisateur : " + e.getMessage(), e);
         }
     }
+
+    public boolean create(Utilisateur utilisateur) {
+        return false;
     }
+}

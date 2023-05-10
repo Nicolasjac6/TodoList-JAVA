@@ -9,6 +9,13 @@ public class Utilisateur {
     private String login;
     private String mdp;
 
+    public Utilisateur(String nom, String prenom, String login, String mdp) {
+        this.nom = nom;
+        this.prenom = prenom;
+        this.login = login;
+        this.mdp = mdp;
+    }
+
     public int getid_utilisateur() {
         return id_utilisateur;
     }

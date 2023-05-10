@@ -1,3 +1,5 @@
+package utilisateur_authentification;
+
 import utilisateur_authentification.DAOUtilisateur;
 import utilisateur_authentification.Utilisateur;
 
@@ -14,7 +16,7 @@ public class main {
     public static void main(String[] args) {
         try {
             // Se connecter à la base de données
-            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/todolist", "root", "");
+            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/nje_todolist", "root", "");
 
             // Créer les DAO
             DAOUtilisateur utilisateurDAO = new DAOUtilisateur(conn);

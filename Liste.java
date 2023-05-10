@@ -1,9 +1,15 @@
+package utilisateur_authentification;
+
+import utilisateur_authentification.ToDoList.src.tache.Tache;
+
 import java.util.List;
 
 public class Liste {
     private int idListe;
     private String nom;
+    private String nomListe;
     private String description;
+    private String descriptionListe;
     private List<Tache> taches;
 
     public Liste(int idListe) {
@@ -12,6 +18,11 @@ public class Liste {
             this.nom = nom;
             this.description = description;
         }
+    }
+
+    public Liste(String nomListe, String descriptionListe) {
+        this.nomListe = nomListe;
+        this.descriptionListe = descriptionListe;
     }
 
     public int getIdListe() {
@@ -52,5 +63,12 @@ public class Liste {
 
     public void supprimerTache(Tache tache) {
         taches.remove(tache);
+    }
+
+    public void setUtilisateur(Utilisateur utilisateur) {
+    }
+
+    public String getId() {
+        return null;
     }
 }

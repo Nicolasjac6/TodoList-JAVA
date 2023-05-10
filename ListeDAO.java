@@ -1,3 +1,5 @@
+package utilisateur_authentification;
+
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -5,7 +7,7 @@ import java.util.List;
 public class ListeDAO {
     private Connection conn;
 
-    public ListeDAO() {
+    public ListeDAO(Connection conn) {
         // Récupération des informations de connexion à la base de données depuis le fichier de configuration
         String url = "jdbc:mysql://localhost:3306/mydatabase";
         String username = "myuser";
@@ -13,7 +15,7 @@ public class ListeDAO {
 
         try {
             // Connexion à la base de données
-            conn = DriverManager.getConnection(url, username, password);
+            this.conn = DriverManager.getConnection(url, username, password);
         } catch (SQLException e) {
             System.out.println("Erreur lors de la connexion à la base de données : " + e.getMessage());
         }
@@ -85,5 +87,12 @@ public class ListeDAO {
         } catch (SQLException e) {
             System.out.println("Erreur lors de la fermeture de la connexion à la base de données : " + e.getMessage());
         }
+    }
+
+    public void create(Liste nouvelleListe) {
+    }
+
+    public List<Liste> findByUtilisateur(Utilisateur utilisateur) {
+        return null;
     }
 }

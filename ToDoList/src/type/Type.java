@@ -1,4 +1,4 @@
-package type;
+package utilisateur_authentification.ToDoList.src.type;
 
 public class Type {
     private int idType;

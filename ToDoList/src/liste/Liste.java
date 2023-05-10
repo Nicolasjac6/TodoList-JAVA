@@ -1,4 +1,4 @@
-package liste;
+package utilisateur_authentification.ToDoList.src.liste;
 
 public class Liste {
     private int idList;

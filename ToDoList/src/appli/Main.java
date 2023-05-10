@@ -1,4 +1,4 @@
-package appli;
+package utilisateur_authentification.ToDoList.src.appli;
 
 import java.sql.*;
 import java.sql.DriverManager;
@@ -9,7 +9,7 @@ public class Main {
     public static void main(String[] args) throws SQLException {
 
         Scanner sc = new Scanner(System.in);
-        String dtb_name = "lsa_Todolist";
+        String dtb_name = "nje_todolist";
         String dtb_user = "root";
         String dtb_psw = "";
         int idUtilisateur = 0;
