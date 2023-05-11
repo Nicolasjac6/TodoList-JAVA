@@ -55,8 +55,8 @@ public class Main {
                    // System.out.println(" - (M)odifier une liste");//
                     System.out.println(" - (Q)uitter l'application");
                     System.out.println(" - (D)econnexion");
-                    potion = true;
-                    option = "quitter";
+
+
                 }
             }
         }
