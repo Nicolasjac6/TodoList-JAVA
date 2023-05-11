@@ -12,6 +12,7 @@ public class creerListe {
     @FXML private TextArea descriptionArea;
 
     private ListeDAO listeDAO; // Une instance de la classe ListeDAO
+    private Object utilisateur;
 
     public void setListeDAO(ListeDAO listeDAO) {
         this.listeDAO = listeDAO;
@@ -32,7 +33,7 @@ public class creerListe {
             return;
         }
 
-        Liste liste = new Liste(nom, description, utilisateur);
+        utilisateur_authentification.Liste liste = new utilisateur_authentification.Liste(nom, description, utilisateur);
         listeDAO.creerListe(liste); // Appeler la méthode creerListe de la classe ListeDAO pour ajouter la nouvelle liste dans la base de données
 
         // Fermer la fenêtre du formulaire

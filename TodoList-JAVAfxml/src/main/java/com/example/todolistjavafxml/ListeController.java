@@ -18,9 +18,9 @@ public class ListeController {
     @FXML
     private Button btnCreerListe;
 
-    private Utilisateur utilisateur;
+    private utilisateur_authentification.Utilisateur utilisateur;
 
-    public void setUtilisateur(Utilisateur utilisateur) {
+    public void setUtilisateur(utilisateur_authentification.Utilisateur utilisateur) {
         this.utilisateur = utilisateur;
     }
 
@@ -37,7 +37,7 @@ public class ListeController {
         }
 
         // Créer la nouvelle liste
-        Liste nouvelleListe = new Liste(nomListe, descriptionListe, utilisateur);
+        utilisateur_authentification.Liste nouvelleListe = new utilisateur_authentification.Liste(nomListe, descriptionListe, utilisateur);
         boolean resultat = ListeDAO.create(nouvelleListe);
 
         if (resultat) {
