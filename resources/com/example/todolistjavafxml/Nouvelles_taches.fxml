@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.gluonhq.charm.glisten.control.TextField?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <TextField fx:id="nom" layoutX="225.0" layoutY="136.0" />
+      <Label layoutX="230.0" layoutY="41.0" text="Nouvelles Taches">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="249.0" layoutY="101.0" text="Nom de la tache">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="263.0" layoutY="200.0" text="Description">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="description" layoutX="224.0" layoutY="240.0" />
+      <Button layoutX="273.0" layoutY="322.0" mnemonicParsing="false" onAction="#seValider" text="Valider" />
+   </children>
+</Pane>
